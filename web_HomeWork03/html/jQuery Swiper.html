@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>zyc jQ</title>
+	<link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/swiper.min.css"/>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/jquery-1.4.5.min.js"></script>
+	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	a{
+		text-decoration: none;	
+		font-size: 1.5em;	
+	}
+
+	.ui-bar-f{
+		background-color: lightblue;
+		
+	}
+	.ui-body-f{
+		background-color: ;
+		
+	}
+	.swiper-slide img{
+		width: 100%;
+		height: 100%;
+	}
+	.swiper-container{
+		width: 100%;
+		height: 100%;
+	}
+
+	</style>
+</head> 
+
+<body> 
+<!--第一部分开始-->
+    <div data-role="page" id="page1"> 
+	<div data-role="header" data-theme="f">
+        	    <h1>张意诚的主页</h1>
+        </div>
+        
+    <div data-role="content"> 
+    	
+    	<!--轮播图部分开始-->
+        <div class="swiper-container">
+    		<div class="swiper-wrapper">
+        		<div class="swiper-slide" align="center">
+        			<img src="../images/laopo4.jpg"/>
+        		</div>
+        		<div class="swiper-slide" align="center">
+        			<img src="../images/laopo2.jpg"/>
+        		</div>
+        		<div class="swiper-slide" align="center">
+        			<img src="../images/laopo3.jpg"/>
+        		</div>
+        		<div class="swiper-slide" align="center">
+        			<img src="../images/laopo5.jpg"/>
+        		</div>
+        		<div class="swiper-slide" align="center">
+        			<img src="../images/laopo1.jpg"/>
+        		</div>
+    		</div>
+    		<!-- 如果需要分页器 -->
+    		<div class="swiper-pagination"></div>
+    
+    		<!-- 如果需要导航按钮 -->
+    		<div class="swiper-button-prev"></div>
+    		<div class="swiper-button-next"></div>
+    
+    		<!-- 如果需要滚动条 -->
+    		<div class="swiper-scrollbar"></div>
+		</div>
+	<!--轮播图部分结束-->
+	
+        	<a href="#page2" data-transition="slidefade">下一页</a>
+    </div> <!--内容部分结束-->
+    
+	 	<div data-role="footer" data-theme="b"> 
+        	    <h4>&copy;zhangyicheng'wife</h4>
+        </div>
+    </div>
+<!--第一部分结束-->
+
+<!--第二部分开始-->
+    
+    <div data-role="page" id="page2"> 
+		<div data-role="header" data-theme="f"> 
+        	    <h1>内容页</h1>
+        </div>
+        
+    <div data-role="content">  
+    	<div class="swiper-container">
+    		<div class="swiper-wrapper">
+        		<div class="swiper-slide" align="center">
+        			<img src="../images/laopo4.jpg"/>
+        		</div>
+        		<div class="swiper-slide" align="center">
+        			<img src="../images/laopo2.jpg"/>
+        		</div>
+        		<div class="swiper-slide" align="center">
+        			<img src="../images/laopo3.jpg"/>
+        		</div>
+        		<div class="swiper-slide" align="center">
+        			<img src="../images/laopo5.jpg"/>
+        		</div>
+        		<div class="swiper-slide" align="center">
+        			<img src="../images/laopo1.jpg"/>
+        		</div>
+    		</div>
+    		<!-- 如果需要分页器 -->
+    		<div class="swiper-pagination"></div>
+    
+    		<!-- 如果需要导航按钮 -->
+    		<div class="swiper-button-prev"></div>
+    		<div class="swiper-button-next"></div>
+    
+    		<!-- 如果需要滚动条 -->
+    		<div class="swiper-scrollbar"></div>
+		</div>
+        	<a href="#page1" rel="external">上一页</a>
+        	<a href="https://htmlpreview.github.io/?https://github.com/1239271010zhang/Home_Work/blob/master/web_HomeWork02/html/index02.html" rel="external">下一页</a>
+    </div>
+    
+	<div data-role="footer" data-theme="b"> 
+        	    <h4>&copy;zhangyicheng'wife</h4>
+    </div>
+    </div>
+<!--第二部分结束-->
+
+
+    
+    <script>
+			var mySwiper = new Swiper('.swiper-container',{
+				//direction:'vertical',
+				loop:true,
+				
+				// 如果需要分页器
+    			pagination: '.swiper-pagination',
+    
+    			// 如果需要前进后退按钮
+    			nextButton: '.swiper-button-next',
+    			prevButton: '.swiper-button-prev',
+    
+    			// 如果需要滚动条
+    			scrollbar: '.swiper-scrollbar'
+  			})        
+		</script>
+</body>
+</html>
+
