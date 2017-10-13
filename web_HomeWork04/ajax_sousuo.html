@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>baidu</title>
+		<style>
+			ul,li{
+				list-style: none;
+			}
+			.ip{
+				text-align:center;
+				
+			}
+			a{
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ip">
+			<input type="text" id="inp">请输入想要查询的信息</input>
+			<ul id="ul"></ul>
+		</div>
+	</body>
+	
+	<script>		
+		function zyc(data){
+			var ul = document.getElementById('ul');
+			ul.innerHTML="";
+			
+			if(data.s.length<=4){
+				for(var i=0; i<data.s.length; i++){
+		 			var li = document.createElement('li');
+					ul.appendChild(li);
+		 			li.innerHTML='<a href="#" />'+data.s[i];
+				}
+			}else{
+				for(var i=0; i<4; i++){
+		 			var li = document.createElement('li');
+					ul.appendChild(li);
+		 			li.innerHTML='<a href="#" />'+data.s[i];
+				}
+			}
+					
+		}
+		
+		
+		var inp = document.getElementById('inp');
+		inp.oninput = function(){
+			if(this.value !== null){
+				var sc = document.createElement('script');
+				sc.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+this.value+'&json=1&p=3&sid=1462_21097_17001&req=2&csor=2&pwd=w&cb=zyc&_=1507690427295';
+
+				document.body.appendChild(sc);
+				document.body.removeChild(sc);
+			}
+	}
+
+	</script>
+</html>
