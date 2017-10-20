@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>QQ_sign_in</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    	
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    	<style type="text/css">
+    		#page1{
+    			background: url(../images/QQbeijing.jpg) no-repeat;
+    			background-size: 100% 100%;
+    			text-align: center;
+    		}
+    		a{
+    			text-decoration: none;
+    		}
+    		p{
+    			color: #000000;
+    		}
+    		#sign_up p:hover{
+    			color: red;
+    		}
+    	</style>
+	</head>
+	<body>
+		<div data-role="page" id="page1">
+			
+			<div data-role="header" data-theme="b">
+				<h1>QQ登录</h1>
+			</div>
+			
+			<div data-role="content">
+				<div class="logo">
+					<img src="../images/QQ.jpg" />
+				</div>
+				
+				<div class="uid">
+					<input type="text" name="name" id="uid" placeholder="账号：" />
+				</div>
+				<div class="psw">
+					<input type="password" name="password" id="psw" placeholder="密码：" />
+				</div>
+				
+				<div class="sign_in">
+					<input type="submit" id="sub" value="登录" />
+				</div>
+				
+				<div id="sign_up">
+					<a href="QQ_sign_up.html"><p>注册</p></a>
+				</div>
+			</div>
+			
+			<div data-role="footer" data-position="fixed"data-theme="b">
+				<h3>&copy;QQ sign in</h3>
+			</div>
+		</div>
+	</body>
+	
+	<script type="text/javascript">
+		
+		$('#sub').click(function(){
+				$.ajax({
+					type:'get',    //post
+					url:'http://datainfo.duapp.com/shopdata/userinfo.php',  
+					dataType:'json',
+					data:{status:'login',
+						userID:$('#uid').val(),
+						password:$('#psw').val()
+					},
+					
+					success:function(info){
+						switch(info){
+							case '0':
+								alert('用户名不存在');
+								break;
+							
+							case '2':
+								alert('用户名与密码不符');
+								break;
+						}
+						
+						if(info['userID'] == $('#uid').val()){
+							window.location.href="QQ.html";
+						}
+					}
+				});
+		});
+	</script>
+</html>
