@@ -56,11 +56,11 @@
 		</style>
 		<script>
 			//消息隐藏
-//			$(document).ready(function(){
-//				$("#msg").on('taphold','li',function(){
-//					$(this).hide();
-//				})
-//			})
+			$(document).ready(function(){
+				$("#ul").on('tap','li',function(){
+					$(this).hide();
+				})
+			})
 			//消息置顶
 			$(document).on("pagecreate",function(){
 				$("#ul").on('taphold','li',function(){
