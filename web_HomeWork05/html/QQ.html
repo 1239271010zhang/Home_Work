@@ -40,7 +40,7 @@
 				width: 50px;
 				
 			}
-			#page3{
+			#conter{
 				text-align: center;
 			}			
 			.a1 p,.a2 p,.a3 p{
@@ -52,25 +52,57 @@
 			.ui-grid-b{
 				margin: 10px 0 20px 0;
 			}
-		
+			#myPanel{
+				background: url(../images/QQbeijing.jpg) no-repeat;
+				background-size: 100% 100%;
+			}
+			#lianjie img{
+				background: none;
+			}
+			.list a{
+				background-color: transparent!important;
+				border: none!important;
+				size: 50px;
+			}
+			#foot{
+				position: absolute;
+				bottom: 20px;
+			}
+			#foot a{
+				background-color: transparent!important;
+				border: none!important;
+			}
+			#head a{
+				background-color: transparent!important;
+				border: none!important;
+			}
 		</style>
 		<script>
+/***			
+			js中文档就绪函数:window.onload = function()
+			jQ中文档就绪函数:pagecreate
+***/
+			
+			
 			//消息隐藏
 			$(document).ready(function(){
-				$("#ul").on('tap','li',function(){
+				$('#ul').on('tap','li',function(){
 					$(this).hide();
 				})
 			})
 			//消息置顶
+			//pagecreate:文档就绪函数
 			$(document).on("pagecreate",function(){
-				$("#ul").on('taphold','li',function(){
-					$("#ul").prepend($(this));
+				$('#ul').on('taphold','li',function(){
+					$('#ul').prepend($(this));
 				})
 			});
+		
 			//消息置底
 //			$(document).on('pagecreate',function(){
 //				$('#ul').on('taphold','li',function(){
-//					$('#ul').append($(this));
+//					$('#ul').append($(this));QQ消息
+
 //				})
 //			})
 
@@ -81,13 +113,41 @@
 	<!--第一个page-->
 		<div data-role="page" id="page1"> 
 			
-			<div data-role="header" data-theme="g">
-				<a href="#" data-role="button" data-iconpos="notext" data-icon="lp"></a>
+			<div data-role="panel" id="myPanel" data-display="push"> 
+				<div id="touxiang" style="float: left;">
+					<a href="#" data-role="button" data-iconpos="notext" data-icon="lp"></a>
+				</div>
+            	<div id="name" style=" margin-left: 10px;">
+            		<p>username</p>
+            	</div>
+            	<div id="qianming">
+            		<p>我的QQ签名</p>
+            	</div>
+            	<div id="lianjie" >
+            		<ul data-role="listview" data-inset="true" class="list">
+                		<li data-icon="false"><a href="#"><img src="../images/1.png" class="ui-li-icon" />了解会员特权</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/2.png" class="ui-li-icon" />QQ钱包</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/3.png" class="ui-li-icon" />个性装扮</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/4.png" class="ui-li-icon" />我的收藏</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/5.png" class="ui-li-icon" />我的相册</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/5.png" class="ui-li-icon" />我的文件</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/5.png" class="ui-li-icon" />免流量特权</a></li>
+            		</ul>
+            	</div>
+            	<div id="foot" data-type="horizontal">
+            		<a href="#" data-inline="true" data-role="button" data-icon="home">设置</a>
+            		<a href="#" data-inline="true" data-role="button" data-icon="home">夜间模式</a>
+            	</div>
+            	
+        	</div> 
+			
+			<div data-role="header" data-theme="g" id="head">
+				<a href="#myPanel" data-role="button" data-iconpos="notext" data-icon="lp"></a>
         	    <h1>QQ消息</h1>
         	    <a href="#" data-role="button" data-iconpos="notext" data-icon="plus"></a>
         	</div>
         
-   			 <div data-role="content"> 
+   			 <div data-role="content" id="swipeR"> 
    			 	<div data-type="vertical" data-role="controlgroup">
    			 		<ul data-role="listview" data-filter="true" data-filter-placeholder="搜索" id="ul">
 						<li><a href="#" data-role="button"><img src="../images/1.png" class="ui-li-icon"/>好友1<span class="ui-li-count">3</span></a></li>
@@ -98,7 +158,7 @@
 				</div>
    			 </div>
         	
-	 		<div data-role="footer" data-position="fixed"> 
+	 		<div data-role="footer" data-position="fixed" > 
         	    <div data-role="navbar">
         	    	<ul>
         	    		<li><a href="#page1" data-role="button" data-icon="info" class="ui-btn-active ui-state-persist">消息</a></li>
@@ -111,9 +171,38 @@
 	<!--第一个page结束-->
 	
 	<!--第二个page开始-->
-		<div data-role="page" id="page2"> 
-			<div data-role="header" data-theme="g">
-				<a href="#" data-role="button" data-iconpos="notext" data-icon="lp"></a>
+		<div data-role="page" id="page2">
+			
+			<div data-role="panel" id="myPanel" data-display="push"> 
+				<div id="touxiang" style="float: left;">
+					<a href="#" data-role="button" data-iconpos="notext" data-icon="lp"></a>
+				</div>
+            	<div id="name" style=" margin-left: 10px;">
+            		<p>username</p>
+            	</div>
+            	<div id="qianming">
+            		<p>我的QQ签名</p>
+            	</div>
+            	<div id="lianjie" >
+            		<ul data-role="listview" data-inset="true" class="list">
+                		<li data-icon="false"><a href="#"><img src="../images/1.png" class="ui-li-icon" />了解会员特权</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/2.png" class="ui-li-icon" />QQ钱包</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/3.png" class="ui-li-icon" />个性装扮</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/4.png" class="ui-li-icon" />我的收藏</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/5.png" class="ui-li-icon" />我的相册</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/5.png" class="ui-li-icon" />我的文件</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/5.png" class="ui-li-icon" />免流量特权</a></li>
+            		</ul>
+            	</div>
+            	<div id="foot" data-type="horizontal">
+            		<a href="#" data-inline="true" data-role="button" data-icon="home">设置</a>
+            		<a href="#" data-inline="true" data-role="button" data-icon="home">夜间模式</a>
+            	</div>
+            	
+        	</div> 
+			
+			<div data-role="header" data-theme="g"  id="head">
+				<a href="#myPanel" data-role="button" data-iconpos="notext" data-icon="lp"></a>
         	    <h1>联系人</h1>
         	    <a href="#" data-role="button">添加</a>
         	</div>
@@ -122,37 +211,37 @@
 				<ul data-role="listview" data-filter="true" data-filter-placeholder="搜索" style="text-align: center;">
           			<li><a href="#">新朋友</a><a href="#">查找新朋友</a></li>
           			<div data-role="controlgroup" data-type="vertical">
-          				<div data-role="collapsible">
+          				<div data-role="collapsible" data-collapsed-icon="carat-r" data-expanded-icon="carat-d">
         				<h1>特别关心</h1>
         					<ul data-role="listview">
-								<li><a href="#" data-role="button" data-iconpos="notext"><img src="../images/laopo1.jpg" class="ui-li-icon"/>家人<span class="ui-li-count">99+</span></a></li>
+								<li data-icon='false'><a href="#"><img src="../images/laopo1.jpg" class="ui-li-icon"/>家人</a></li>
 							</ul>
         				</div>
-        				<div data-role="collapsible">
+        				<div data-role="collapsible" data-collapsed-icon="carat-r" data-expanded-icon="carat-d">
         				<h1>好友列表1</h1>
         					<ul data-role="listview">
-								<li><a href="#" data-role="button"><img src="../images/1.png" class="ui-li-icon"/>好友1<span class="ui-li-count">3</span></a></li>
-								<li><a href="#" data-role="button"><img src="../images/2.png" class="ui-li-icon"/>好友2<span class="ui-li-count">99+</span></a></li>
-								<li><a href="#" data-role="button"><img src="../images/4.png" class="ui-li-icon"/>好友3<span class="ui-li-count">25</span></a></li>
-								<li><a href="#" data-role="button"><img src="../images/5.png" class="ui-li-icon"/>好友4<span class="ui-li-count">5</span></a></li>
+								<li><a href="#"><img src="../images/1.png" class="ui-li-icon"/>好友1<span class="ui-li-count">3</span></a></li>
+								<li><a href="#"><img src="../images/2.png" class="ui-li-icon"/>好友2<span class="ui-li-count">99+</span></a></li>
+								<li><a href="#"><img src="../images/4.png" class="ui-li-icon"/>好友3<span class="ui-li-count">25</span></a></li>
+								<li><a href="#"><img src="../images/5.png" class="ui-li-icon"/>好友4<span class="ui-li-count">5</span></a></li>
 							</ul>
         				</div>
-        				<div data-role="collapsible">
+        				<div data-role="collapsible" data-collapsed-icon="carat-r" data-expanded-icon="carat-d">
         				<h1>好友列表2</h1>
         					<ul data-role="listview">
-								<li><a href="#" data-role="button"><img src="../images/1.png" class="ui-li-icon"/>好友1<span class="ui-li-count">3</span></a></li>
-								<li><a href="#" data-role="button"><img src="../images/2.png" class="ui-li-icon"/>好友2<span class="ui-li-count">99+</span></a></li>
-								<li><a href="#" data-role="button"><img src="../images/4.png" class="ui-li-icon"/>好友3<span class="ui-li-count">25</span></a></li>
-								<li><a href="#" data-role="button"><img src="../images/5.png" class="ui-li-icon"/>好友4<span class="ui-li-count">5</span></a></li>
+								<li><a href="#"><img src="../images/1.png" class="ui-li-icon"/>好友1<span class="ui-li-count">3</span></a></li>
+								<li><a href="#"><img src="../images/2.png" class="ui-li-icon"/>好友2<span class="ui-li-count">99+</span></a></li>
+								<li><a href="#"><img src="../images/4.png" class="ui-li-icon"/>好友3<span class="ui-li-count">25</span></a></li>
+								<li><a href="#"><img src="../images/5.png" class="ui-li-icon"/>好友4<span class="ui-li-count">5</span></a></li>
 							</ul>
         				</div>
-        				<div data-role="collapsible">
+        				<div data-role="collapsible" data-collapsed-icon="carat-r" data-expanded-icon="carat-d">
         				<h1>好友列表3</h1>
         					<ul data-role="listview">
-								<li><a href="#" data-role="button"><img src="../images/1.png" class="ui-li-icon"/>好友1<span class="ui-li-count">3</span></a></li>
-								<li><a href="#" data-role="button"><img src="../images/2.png" class="ui-li-icon"/>好友2<span class="ui-li-count">99+</span></a></li>
-								<li><a href="#" data-role="button"><img src="../images/4.png" class="ui-li-icon"/>好友3<span class="ui-li-count">25</span></a></li>
-								<li><a href="#" data-role="button"><img src="../images/5.png" class="ui-li-icon"/>好友4<span class="ui-li-count">5</span></a></li>
+								<li><a href="#"><img src="../images/1.png" class="ui-li-icon"/>好友1<span class="ui-li-count">3</span></a></li>
+								<li><a href="#"><img src="../images/2.png" class="ui-li-icon"/>好友2<span class="ui-li-count">99+</span></a></li>
+								<li><a href="#"><img src="../images/4.png" class="ui-li-icon"/>好友3<span class="ui-li-count">25</span></a></li>
+								<li><a href="#"><img src="../images/5.png" class="ui-li-icon"/>好友4<span class="ui-li-count">5</span></a></li>
 							</ul>
         				</div>
         			</div>
@@ -174,14 +263,43 @@
 	
 	<!--第三个page开始-->
 		<div data-role="page" id="page3"> 
-			<div data-role="header" data-theme="g" >
-				<a href="#" data-role="buttton" data-icon="lp" data-iconpos="notext"></a>
+			
+			<div data-role="panel" id="myPanel" data-display="push"> 
+				<div id="touxiang" style="float: left;">
+					<a href="#" data-role="button" data-iconpos="notext" data-icon="lp"></a>
+				</div>
+            	<div id="name" style=" margin-left: 10px;">
+            		<p>username</p>
+            	</div>
+            	<div id="qianming">
+            		<p>我的QQ签名</p>
+            	</div>
+            	<div id="lianjie" >
+            		<ul data-role="listview" data-inset="true" class="list">
+                		<li data-icon="false"><a href="#"><img src="../images/1.png" class="ui-li-icon" />了解会员特权</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/2.png" class="ui-li-icon" />QQ钱包</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/3.png" class="ui-li-icon" />个性装扮</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/4.png" class="ui-li-icon" />我的收藏</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/5.png" class="ui-li-icon" />我的相册</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/5.png" class="ui-li-icon" />我的文件</a></li>
+                		<li data-icon="false"><a href="#"><img src="../images/5.png" class="ui-li-icon" />免流量特权</a></li>
+            		</ul>
+            	</div>
+            	<div id="foot" data-type="horizontal">
+            		<a href="#" data-inline="true" data-role="button" data-icon="home">设置</a>
+            		<a href="#" data-inline="true" data-role="button" data-icon="home">夜间模式</a>
+            	</div>
+            	
+        	</div> 
+			
+			<div data-role="header" data-theme="g" id="head">
+				<a href="#myPanel" data-role="buttton" data-icon="lp" data-iconpos="notext"></a>
         	    <h1>动态</h1>
         	    <a href="#" data-role="button">更多</a>
         	    
         	</div>
         
-   			 <div data-role="content">
+   			 <div data-role="content" id="conter">
    			 	<div>
 					<input type="search" name=""search id="search" placeholder="search" style="text-align: center;"/>
    			 	</div>
@@ -220,9 +338,9 @@
 	 		<div data-role="footer" data-position="fixed" > 
         	    <div data-role="navbar" >
         	    	<ul>
-        	    		<li><a href="#page1" data-role="button" data-icon="info">消息</a></li>
-        	    		<li><a href="#page2" data-role="button" data-icon="home">主页</a></li>
-        	    		<li><a href="#page3" data-role="button" data-icon="star" class="ui-btn-active ui-state-persist">动态</a></li>
+        	    		<li><a href="#page1"  data-icon="info">消息</a></li>
+        	    		<li><a href="#page2"  data-icon="home">主页</a></li>
+        	    		<li><a href="#page3"  data-icon="star" data-iconpos="notext" class="ui-btn-active ui-state-persist">动态</a></li>
         	    	</ul>
         	    </div>
         	</div>
