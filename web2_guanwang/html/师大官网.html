@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>师大官网</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			a{
+				text-decoration: none;
+				color: #000;
+			}
+			ul,li{
+				list-style: none;
+			}
+			#top_border{
+				height: 5px;
+				width: 1000px;
+				background-color: darkblue;
+				margin: 0 auto;
+			}
+			#top{
+				width: 1000px;
+				height: 161px;
+				margin: 0 auto;
+			}
+			#top .logo{
+				width: 40px;
+				height: 80px;
+				float: left;
+				margin-top: 13px;
+			}
+			#top .top_right{
+				text-align: right;
+			    height: 80px;
+			    float: right;
+			    overflow: hidden;
+			    margin-top: 13px;
+			    line-height: 28px;
+			}
+			#top .top_right_1{
+				padding-right: 25px;
+			}
+			#top .top_right_2{
+				float: left;
+				padding-right: 25px;
+			}
+			#nav{
+				width: 1000px;
+			    height: 55px;
+			    margin-top: 100px;
+			    border-top: 1px solid darkblue;
+			    padding-top: 5px;
+			    position: absolute;
+			}
+			#nav_ul li{
+				float: left;
+			}
+			#nav_ul li{
+				display: block;
+			    width: 110px;
+			    height: 50px;
+			    line-height: 50px;
+			    padding-top: 5px;
+			    text-align: center;
+			    font-weight: bold;
+			    font-size: 15px;
+			}
+			#nav_ul .spic{
+				background: url(../img/nav.gif) no-repeat;
+			    width: 10px;
+			    height: 6px;
+			    display: block;
+			    margin-top: -10px\9;
+			    margin-top: -30px;
+			    margin-left: 90px;
+			}
+			#nav_ul li ul{
+				margin: 0;
+			    padding: 0;
+			    background-color: blue;
+			    width: 110px;
+			    position: absolute;
+			    z-index: 999;
+			    display: none;
+			}
+			#nav_ul li.show ul{
+				display: block;
+			}
+			#nav_ul li ul li{
+				margin-top: -10px;
+				margin-left: 0px;
+			}
+			#wrap{
+				width: 1200px;
+				height: 397px;
+				border: 5px solid #000;
+				overflow: hidden;
+				margin: 0 auto;
+				position: relative;
+			}
+			#btn_box{
+				width: 1002px;
+				height: 73px;
+				background: url(../img/banner.png);
+				position: absolute;
+				bottom: 0;
+				left: 99px;
+			}
+			#btn_box span{
+				color: #fff;
+				display: block;
+				width: 40px;
+				float: left;
+				height: 73px;
+				font-size: 30px;
+				text-align: center;
+				line-height: 73px;
+				cursor: pointer;
+			}
+			#btn_box #next{
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="top_border"></div>
+		<div id="top">
+			<div class="logo">
+    			<img src="../img/logo.png"/>
+    		</div>
+    		<div class="top_right">
+    			<div class="top_right_1">
+    				<a href="#">旧版网页</a>
+    				<a href="#">English Version</a>
+    			</div>
+    			<div class="top_right_2">
+    				<input type="search" placeholder="搜索" />
+    			</div>
+    		</div>
+			<div id="nav">
+				<ul id="nav_ul">       
+        			<li>首页</li>        
+        			<li>学校概况<span class="spic"></span>          
+            			<ul>                
+				            <li><a href="#">学校简介</a></li>
+				            <li><a href="#">学科专业</a></li>
+				            <li><a href="#">治理架构</a></li>
+				            <li><a href="#">历史沿革</a></li>
+				            <li><a href="#">学校标志</a></li>
+				            <li><a href="#">校园风光</a></li>
+				            <li><a href="#">校园地图</a></li>
+			   			</ul>       
+        			</li>        
+        			<li>机构设置<span class="spic"></span>          
+			            <ul>               
+				            <li><a href="#">教学单位</a></li>
+				            <li><a href="#">管理服务</a></li>
+				            <li><a href="#">附属单位</a></li>
+				            <li><a href="#">汇华学院</a></li>
+			            </ul>       
+			        </li>        
+			        <li>人才培养<span class="spic"></span>
+			            <ul>                
+				            <li><a href="#">师资队伍</a></li>
+				            <li><a href="#">本科生教育</a></li>
+				            <li><a href="#">研究生教育</a></li>
+				            <li><a href="#">继续教育</a></li>
+				            <li><a href="#">留学生教育</a></li>
+				 			<li><a href="#">中外合作办学</a></li>
+						</ul>       
+			        </li>        
+			        <li>科学研究<span class="spic"></span>            
+			            <ul>                
+				           	<li><a href="#">科学研究平台</a></li>
+				            <li><a href="#">自然科学与技术</a></li>
+				            <li><a href="#">人文与社会科学</a></li>
+				            <li><a href="#">合作交流</a></li>
+				            <li><a href="#">学术期刊</a></li>
+			 			</ul>       
+			        </li>
+			        <li>招生就业<span class="spic"></span>            
+			            <ul>                
+				            <li><a href="#">本科生招生</a></li>
+				            <li><a href="#">研究生招生</a></li>
+				            <li><a href="#">继续教育招生</a></li>
+				            <li><a href="#">留学生招生</a></li>
+				            <li><a href="#">就业服务</a></li>
+			            </ul>       
+			        </li>     
+        			<li>人才招聘</li>     
+			        <li>公共服务<span class="spic"></span>           
+			            <ul>                
+				            <li><a href="#">本科生服务</a></li>
+				            <li><a href="#">研究生服务</a></li>
+				            <li><a href="#">行政事务服务</a></li>
+				            <li><a href="#">图书情报服务</a></li>
+				            <li><a href="#">预决算公开</a></li>
+				            <li><a href="#">生活服务</a></li>
+				            <li><a href="#">网络服务</a></li>
+			            </ul>       
+			        </li>             
+        			<li><a href="#">校友会</a></li>   
+    			</ul>
+			</div>
+		</div>
+		
+		<div id="wrap">
+			<a href="#" style="display: block;"><img src="../img/0.gif"/></a>
+			<a href="#"><img src="../img/h1.jpg" /></a>
+			<a href="#"><img src="../img/h2.jpg" /></a>
+			<a href="#"><img src="../img/h3.jpg" /></a>
+			<a href="#"><img src="../img/h4.jpg" /></a>
+			<a href="#"><img src="../img/h5.jpg" /></a>
+			<a href="#"><img src="../img/h6.jpg" /></a>
+			<a href="#"><img src="../img/h7.jpg" /></a>
+			<a href="#"><img src="../img/h8.jpg" /></a>
+			<div id="btn_box">
+				<span id="prev"><</span>
+				<span id="next">></span>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+//		轮播图
+			var wrap = document.getElementById('wrap');
+			var as = wrap.getElementsByTagName('a');
+			var prev = document.getElementById('prev');
+			var next = document.getElementById('next');
+			var i=0;
+			function Imgchange(){
+				as[i%as.length].style.display = 'none';
+				i++;
+				as[i%as.length].style.display = 'block'
+				
+			}
+			var timer = setInterval(Imgchange,1000)
+			wrap.onmouseover = function(){
+				clearInterval(timer);
+			}
+			wrap.onmouseout =function(){
+				timer = setInterval(Imgchange,2000)
+			}
+			prev.onclick = function(){
+				as[i%as.length].style.display = 'none';
+				i--;
+				if(i<0){
+					i = as.length -1;
+				}
+				as[i%as.length].style.display = 'block'
+			}
+			next.onclick = function(){
+				Imgchange();
+			}
+		
+//		导航栏
+		var lis = document.getElementsByTagName("li");
+		for (var i=0; i<lis.length; i++){
+			lis[i].onmouseover = function(){
+				this.className = "show";
+			}
+			lis[i].onmouseout = function(){
+				this.className = "";
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>zyc文字无缝滚动</title>
+		<style type="text/css">
+			#box{ 
+				overflow:hidden;
+				width:800px;
+			}
+			#box_son {
+				width:6000px; 
+			}
+			#box_son div{ 
+				float:left;
+				background-color: red;
+			}
+			#box1 ul{
+				height:30px; 
+			}
+			#box1 ul li{
+				float:left; 
+				line-height:30px; 
+				list-style:none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+		 	<div id="box_son">
+		    	<div id="box1">
+		    		<ul>
+				        <li>公告：这是一段文字轮播这是一段文字轮播这是一段文字轮播这是一段文字轮播。</li>
+						<li>公告：这是一段文字轮播这是一段文字轮播这是一段文字轮播这是一段文字轮播。</li>
+		      		</ul>
+		    	</div>
+		    	<div id="box2"></div>
+		  	</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var box = document.getElementById("box");
+		var box1 = document.getElementById("box1");
+		var box2 = document.getElementById("box2");
+		
+		box2.innerHTML = box1.innerHTML;
+		
+		function move(){
+			if(box.scrollLeft - box2.offsetWidth >= 0){
+				box.scrollLeft -= box1.offsetWidth;
+			}
+			else{
+				box.scrollLeft++;
+			}
+		}
+		var timer = setInterval(move,20);
+		
+		box.onmouseout=function (){
+			timer = setInterval(move,20);
+		}
+		box.onmouseover=function(){
+			clearInterval(timer);
+		}
+	</script>
+</html>

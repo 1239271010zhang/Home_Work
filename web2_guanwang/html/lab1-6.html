@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>输入框排序</title>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<input type="button" onclick="sPrompt()" value="点击输入数字"/>
+	</body>
+	<script type="text/javascript">
+		function sPrompt(){
+			var sprompt = window.prompt("输入任意数字");
+			var sp = sprompt.split(",");
+			
+			//js.sort排序
+			var s = sp.sort(function(a,b){
+				return a - b;
+			});
+			console.log(s);
+
+			//冒泡排序
+//			for(var i=0;i<sp.length;i++){
+//				for(var j=0;j<sp.length;j++){
+//					if(sp[i]>sp[j]){
+//						var t = sp[i];
+//						sp[i] = sp[j];
+//						sp[j] = t;
+//					}
+//				}
+//			}
+//			console.log(sp);
+
+
+		}
+	</script>
+</html>

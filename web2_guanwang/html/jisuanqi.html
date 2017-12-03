@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>zyc简单计算器</title>
+		<style type="text/css">
+			#div{
+				text-align: center;
+			}
+			#result{
+				height: 100px;
+				width: 240px;
+				text-align: right;
+			}
+			#btn{
+				height: 100px;
+				width: 80px;
+			}
+			.btn{
+				height: 100%;
+				width: 100%;
+			}
+			td{
+				height: 100px;
+				width: 80px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div">
+			<table border="2px">
+				<tr>
+					<th colspan="3" id="result"></th>
+					<th id="btn"><input type="button" value="C" class="btn" onclick="clearData()"/></th>
+				</tr>
+				<tr>
+					<td><input type="button" value="1" class="btn" onclick="showData(this.value)"/></td>
+					<td><input type="button" value="2" class="btn" onclick="showData(this.value)"/></td>
+					<td><input type="button" value="3" class="btn" onclick="showData(this.value)"/></td>
+					<td><input type="button" value="+" class="btn" onclick="showData(this.value)"/></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="4" class="btn" onclick="showData(this.value)"/></td>
+					<td><input type="button" value="5" class="btn" onclick="showData(this.value)"/></td>
+					<td><input type="button" value="6" class="btn" onclick="showData(this.value)"/></td>
+					<td><input type="button" value="-" class="btn" onclick="showData(this.value)"/></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="7" class="btn" onclick="showData(this.value)"/></td>
+					<td><input type="button" value="8" class="btn" onclick="showData(this.value)"/></td>
+					<td><input type="button" value="9" class="btn" onclick="showData(this.value)"/></td>
+					<td><input type="button" value="*" class="btn" onclick="showData(this.value)"/></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="0" class="btn" onclick="showData(this.value)"/></td>
+					<td><input type="button" value="." class="btn" onclick="showData(this.value)"/></td>
+					<td><input type="button" value="=" class="btn" onclick="calculate()"/></td>
+					<td><input type="button" value="/" class="btn" onclick="showData(this.value)"/></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var str = new String();
+		var jg = document.getElementById('result');
+		
+		function showData(value){
+			str += value;
+			jg.innerHTML = str;
+		}
+		
+		function calculate(){
+			jg.innerHTML = "";
+			var resultNum = eval(str);
+			var strs = JSON.stringify(resultNum);
+			if(strs.indexOf('.') > 0){
+				str = parseFloat(strs.slice(0,strs.indexOf('.')+3));
+			}else{
+				str = parseFloat(strs);
+			}
+			jg.innerHTML = str;
+		}
+		
+		function clearData(){
+			str = "";
+			jg.innerHTML = 0;
+		}
+	</script>
+</html>
