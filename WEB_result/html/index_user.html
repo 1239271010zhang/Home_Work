@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>个人中心</title>
+		<link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css" />
+		<script src="../js/jquery.1.11.3.min.js"></script>
+		<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" href="../css/index_user.css" />
+	</head>
+	<body>
+		<div data-role="panel" id="mypanel">
+			<div id="panel_head">
+				<a href="#" data-role="button" data-iconpos="notext" data-icon="lp"></a>
+			</div>
+            <div id="name">
+            	<p>唯品会Vip会员</p>
+            </div>
+            <a id="btn1"><button>更换账户</button></a>
+			<a id="btn2"><button>退出登录</button></a>
+		</div>
+		<div data-role="header" id="head" data-position="fixed">
+			<div id="mbx">
+				<a href="#mypanel" rel="external" data-role="button"><p>设置</p></a>
+			</div>
+			<div id="img">
+				<a href="index.html" rel="external"><img src="../images/gr0.jpg"/></a>
+			</div>
+		</div>
+		<div data-role="content">
+			<div id="content00">
+				<a href="#" data-role="button" data-iconpos="notext" data-icon="lp" id="toux"></a>
+				<p>唯品会会员</p>
+				<a href="#" id="span1"><span>钻石会员</span></a>
+				<a href="#" id="span2"><span>领取信用福利</span></a>
+				
+			</div>
+			<div id="content01" class="ui-gird-b">
+				<div class="ui-block-a">
+					<a href="#"><img src="../images/gr1.png"/><p>待付款</p></a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#"><img src="../images/gr2.png"/><p>待收货</p></a>
+				</div>
+				<div class="ui-block-c">
+					<a href="#"><img src="../images/gr3.png"/><p>全部订单</p></a>
+				</div>
+			</div>
+			<div id="content02">
+				<div class="top">
+					<p>我的特卖</p>
+				</div>
+				<div  class="ui-gird-c">
+					<div class="ui-block-a">
+						<a href="#"><img src="../images/gr4.png"/><p>我的专属</p></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#"><img src="../images/gr5.png"/><p>品牌收藏</p></a>
+					</div>
+					<div class="ui-block-c">
+						<a href="#"><img src="../images/gr6.png"/><p>商品收藏</p></a>
+					</div>
+					<div class="ui-block-d">
+						<a href="#"><img src="../images/gr7.png"/><p>我的足迹</p></a>
+					</div>
+				</div>
+			</div>
+			<div id="content03" data-role="controlgroup" data-type="vertical">
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#"><p>会员俱乐部<span style="float: right; color: #696969;">领取10元劵</span></p></a></li>
+					<li><a href="#"><p>我的公益<span style="float: right; color: #696969;">你走1Km，我们捐一元</span></p></a></li>
+					<li><a href="#"><p>推荐有奖<span style="float: right; color: #696969;">iPhone X等你来拿</span></p></a></li>
+					<li><a href="#"><p>唯品金融<span style="float: right; color: #696969;">我的小金库</span></p></a></li>
+					<li><a href="#"><p>我的口碑<span style="float: right; color: #696969;">填写口碑赢40个唯品币</span></p></a></li>
+				</ul>
+			</div>
+			<div id="content04" data-role="controlgroup" data-type="vertical" >
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#"><p>账户与安全</p></a></li>
+					<li><a href="#"><p>唯品客服</p></a></li>
+					<li><a href="#"><p>关于唯品会</p></a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme='z'>
+			<h3>&copy;唯品会</h3>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('#btn1').click(function(){
+			localStorage.removeItem('userID');
+			window.location.href="sign_in_swiper.html";
+		})
+		$('#btn2').click(function(){
+			localStorage.removeItem('login');
+			localStorage.removeItem('userID');
+			window.location.href="sign_in_swiper.html";
+		})
+	</script>
+</html>

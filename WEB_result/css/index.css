@@ -1,0 +1,159 @@
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul,li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+			color: #000;
+		}
+		p{
+			font-family: "楷体";
+			font-weight: bold;
+			color: #000;
+		}
+		.ui-icon-lp{
+			background: url(../images/laopo1.jpg) no-repeat;
+			background-size: 100% 100%;
+		}
+		.ui-btn-icon-notext:after{
+			background-color: rgba(255,255,255,0.07);
+		}
+		#page{
+			background: url(../images/bj.jpg) no-repeat;
+			background-size: 100% 100%;
+		}
+		#head1{
+			height: 110px;
+			background-color: #fff;
+			color: #eb3e9e;
+		}
+		.ui-panel-wrapper{
+			background-color: transparent!important;
+		}
+		#mbx{
+			height: 50px;
+			width: 15%;
+			background-color: transparent!important;
+			border: none!important;
+			float: left;
+		}
+		#h1{
+			height: 50px;
+			width: 60%;
+			float: left;
+			text-align: center;
+			line-height: 50px;
+		}
+		#h1 span{
+			font-size: 25px;
+			line-height: 50px;
+		}
+		#header_select{
+			height: 50px;
+			width: 25%;
+			text-align: right;
+			float: left;
+		}
+		#mbx img{
+			height: 100%;
+			width: 100%;
+		}
+		.wrapper{
+			height: 50px;
+			position: relative;
+			margin-top: 50px;
+		}
+		.wrapper .scroller{
+			position: absolute;
+		}
+		#classList li{
+			height: 50px;
+			float: left;
+			line-height: 50px;
+			padding: 0 20px;
+		}
+		.cur{
+			border-bottom:3px solid red;
+		}
+		#li01{
+			background-color: #eb3e9e;
+		}
+		#li02 img{
+			height: 100%;
+		}
+		#li01 p{
+			color: #fff;
+			font-family: "微软雅黑";
+			font-weight: normal;
+		}
+		.ui-bar-z{
+			background-color: #eb3e9e;
+			color: #fff;
+			font-family: '楷体';
+			font-weight: lighter;
+		}
+		#myPanel{
+			/*background-color:#EB3E9E;*/
+			text-align: center;
+		}
+		#panel_head a{
+			height: 60px;
+			width: 60px;
+			margin-left: 35%;
+		}
+		#panel_content{
+			margin-top: 20px
+		}
+		#panel_content ul a{
+			background-color: transparent!important;
+			border: none!important;
+		}
+		#panel_foot{
+			margin-top:20px
+		}
+		#goodList li{
+			height: 150px;
+			width: 46%;
+			float: left;
+			margin: 50px 10px 0 0;
+			border: 2px solid #EB3E9E;
+		}
+		#goodList img{
+			height: 100%;
+			width: 100%;
+		}
+		#content_swiper{
+			height: 40px;
+			left: 0px;
+		}
+		#box{ 
+			overflow:hidden;
+		}
+		#box_son{
+			width:1000%; 
+		}
+		#box_son div{ 
+			float:left;
+			background-color: #EB3E9E;
+		}
+		#box1 ul{
+			height:40px; 
+		}
+		#box1 ul li{
+			float:left; 
+			line-height:40px; 
+			list-style:none;
+			color: #fff;
+			font-family: "微软雅黑";
+		}
+		#goodList li ul{
+			display: none;
+			background-color: yellow;
+			text-align: center;
+		}
+		#goodList li.show ul{
+			display: block;
+		}

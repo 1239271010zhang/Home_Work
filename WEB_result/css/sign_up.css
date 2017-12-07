@@ -1,0 +1,18 @@
+			a{
+				text-decoration: none;
+			}
+			p{
+				font-family: '楷体';
+				color: black;
+			}
+			.ui-bar-z{
+				background-color: #eb3e9e;
+				color: #fff;
+			}
+			#content1{
+				margin-top: 20%;
+			}
+			#p1,#p2{
+				color: red;
+				height: 10px;
+			}

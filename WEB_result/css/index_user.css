@@ -1,0 +1,127 @@
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			p{
+				font-family: "楷体";
+				font-weight: bolder;
+				color: #000;
+			}
+			a{
+				text-decoration: none;
+				color: #000;
+			}
+			.ui-btn-icon-notext:after{
+				background-color: rgba(255,255,255,0.07);
+			}
+			.ui-bar-z{
+				background-color: #eb3e9e;
+				color: #fff;
+			}
+			.ui-icon-lp{
+				background: url(../images/laopo1.jpg) no-repeat;
+				background-size: 100% 100%;
+			}
+			#head{
+				height: 50px;
+				line-height: 50px;
+				width: 100%;
+				background-color: #fafafa;
+				border-bottom: 1px solid #000;
+			}
+			#head #img{
+				float: right;
+				height: 45px;
+				width: 10%;
+			}
+			#img img{
+				height: 100%;
+				width: 100%;
+			}
+			#mbx{
+				height: 50px;
+				width: 10%;
+				float: left;
+			}
+			#mbx a{
+				background-color: #fafafa!important;
+				border: none!important;
+			}
+			#content00{
+				height: 120px;
+				width: 100%;
+				
+			}
+			#content00 #toux{
+				height: 70px;
+				width: 70px;
+				float: left;
+			}
+			#content00 p{
+				margin: 20px 0 0 20px;
+				font-size: larger;
+				float: left;
+			}
+			#span1{
+				float: left;
+				margin-left: -80px;
+				margin-top: 50px;
+				color: #696969;
+			}
+			#span2{
+				float: left;
+				margin-top: 50px;
+				color: #696969;
+			}
+			#content01{
+				height: 130px;
+				width: 100%;
+				background-color: #fff;
+			}
+			#content01 img{
+				width: 80px;
+				height: 80px;
+			}
+			#content01 .ui-block-a,#content01 .ui-block-b,#content01 .ui-block-c{
+				width: 30%;
+				text-align: center;
+				margin-left: 3%;
+				margin-top: 3%;
+			}
+			#content01 .ui-block-b, #content01 .ui-block-c{
+				border-left: 1px solid #808080;
+			}
+			#content02{
+				height: 130px;
+				margin-top: 20px;
+				background-color: #fff;
+			}
+			#content02 .top{
+				height: 40px;
+				line-height: 40px;
+				border-bottom: 1px solid #808080;
+			}
+			#content02 .top p{
+				margin-left: 10px;
+			}
+			#content02 img{
+				height: 40px;
+				width: 40px;
+			}
+			#content02 .ui-block-a,#content02 .ui-block-b,#content02 .ui-block-c,#content02 .ui-block-d{
+				width: 25%;
+				text-align: center;
+				margin-top: 3%;
+			}
+			#content03 a,#content04 a{
+				background-color: #fff!important;
+				font-size: x-large;
+			}
+			#mypanel{
+				text-align: center;
+			}
+			#panel_head a{
+				height: 60px;
+				width: 60px;
+				margin-left: 35%;
+			}

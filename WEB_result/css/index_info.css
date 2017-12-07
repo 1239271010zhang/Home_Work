@@ -1,0 +1,50 @@
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			ul,li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+				color: #000;
+			}
+			p{
+				font-family: "楷体";
+				font-weight: bold;
+				color: #000;
+			}
+			.ui-bar-z{
+				background-color: #EB3E9E;
+				color: #fff;
+			}
+			#info>li{
+				width: 100%;
+			}
+			#info>li img{
+				height: 100%;
+				width: 100%;
+			}
+			#head{
+				height: 40px;
+				line-height: 40px;
+			}
+			#head a{
+				background-color: transparent!important;
+				border: none!important;
+			}
+			#head p{
+				text-align: center;
+				font-size: larger;
+				
+			}
+			#btns{
+				float: right;
+				z-index: 999;
+			}
+			#btn{
+				background-color: transparent!important;
+			}
+			#btns a{
+				background-color: transparent!important;
+			}
