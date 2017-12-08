@@ -1,4 +1,4 @@
-	$(function(){
+$(function(){
 		//计算总价函数
 		function setTotal(){ 
 			var s = 0; 
@@ -49,7 +49,6 @@
 							number:0,
 						}
 					});
-					$(this).parents('tr').remove();
 				});
 				emptyCar();
             })
@@ -69,6 +68,26 @@
 				$(this).parents('tr').remove();
 				setTotal();
           	});
+          	//删除选中商品
+          	$('#goodList').on('click','#remove_checked',function(){
+          		 $("#goodList :checkbox").each(function(){
+          		 	if($(this).prop('checked')){
+          		 		$.ajax({
+							type:'get',
+							url:'http://datainfo.duapp.com/shopdata/updatecar.php',
+							dataType:'json',
+							data:{
+								userID:localStorage.getItem('userID'),
+								goodsID:$(this).parents('tr').siblings('tr').attr('goodID'),
+								number:0,
+							}
+						});
+						$(this).parents('tr').siblings('tr').remove();
+						$(this).parents('tr').remove();
+						setTotal();
+          		 	}
+          		 })
+          	})
           	//选中单个商品
           	$('#goodList').on('click','#checkbox',function(){
           		setTotal();
@@ -99,13 +118,13 @@
 							<td rowspan="2"><input type="checkbox" id='checkbox'/></td>
 							<td rowspan="2" id="imgs"><img style="height:100%;width:100%" src="`+data[i].goodsListImg+`" /></td>
 							<td colspan="2" style="vertical-align:top;width:170px">
-							<p style="font-size:larger">`+data[i].goodsName.slice(0,18)+`</p>
+							<p style="font-weight:bold">`+data[i].goodsName+`</p>
 							<p style="color:#696969;font-size:smaller">UGG 施华洛世奇旗舰店</td>
-							<td align="right" style="vertical-align:top"><p style="color:red" class="price">￥`+data[i].price+`</p>
+							<td align="right" style="vertical-align:top"><p style="font-weight:bolder" class="price">￥`+data[i].price+`</p>
 							<p style="color:#696969;">折扣:`+data[i].discount+`</p>
 							</td>
 							</tr>
-							<tr>
+							<tr goodID="`+data[i].goodsID+`">
 							<td style="vertical-align:bottom" colspan="3">
 							<span>
 							<input class="min" type="button" value="-" style="height:25px;width:20px;float:left"/>
@@ -154,11 +173,11 @@
 						
 						$('#goodList').html($('#goodList').html()+
 						`<tr>
-						<td colspan="5" style="border-top:1px solid #696969">总价：<span id="total" style="color:red"></span></td>
-						</tr>`)
+						<td colspan="4" style="border-top:1px solid #696969">总金额：<span id="total" style="color:red"></span></td>
+						<td align="right" style="border-top:1px solid #696969"><a id="remove_checked" style="text-decoration:none;color:red;">删除</a></td></tr>`)
 					}else{
 						emptyCar();
 					}
 				}
 			})
-	})
+})

@@ -4,36 +4,56 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>开启动画</title>
-		<link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css" />
 		<script src="../js/jquery.1.11.3.min.js"></script>
-		<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css"/>
+		<script src="../js/swiper.min.js"></script>
 		<style type="text/css">
-			#page{
-				height: 730px;
-				background: url(../images/k1.jpg) no-repeat;
-				background-size: 100% 100%;
+			html,body{
+				height: 100%;
+				width: 100%;
 			}
-			#s1 a{
-				position: absolute;
-				bottom: 40%;
-				margin-left: 35%;
+			.swiper-container{
+				height: 100%;
+				width: 100%;
+			}
+			.swiper-slide img{
+				height: 100%;
+				width: 100%;
+			}
+			#btn_slide{
+				background: url(../images/bj.jpg) no-repeat;
+				background-size: 100% 100%;
+				text-align: center;
+			}
+			#btn_slide a{
+				margin-top: 3000px;
+				text-decoration: none;
+				color: #000;
 			}
 		</style>
 	</head>
 	<body>
-		<div id="page">
-			<div data-role="content" id="s1">
-		        <a data-role="button" data-inline="true" href="sign_in.html" rel="external">立即开启</a>
-		    </div>
+		<div class="swiper-container">
+	    	<div class="swiper-wrapper">
+	        	<div class="swiper-slide"><img src="../images/k1.jpg"/></div>
+	        	<div class="swiper-slide"><img src="../images/k2.jpg"/></div>
+	        	<div class="swiper-slide" id="btn_slide"><a href="sign_in.html" rel="external">立即体验</a></div>
+	    	</div>
+	    	<div class="swiper-pagination"></div>
 		</div>
-    			
 	</body>
 	
 	<script>
 		$(function(){
 			if(localStorage.getItem('login')){
-				window.location.href="sign_in.html";
+//				window.location.href="sign_in.html";
 			};
-		})      
+		}) 
+		
+		var mySwiper = new Swiper('.swiper-container',{
+//				loop:true,
+    			pagination: '.swiper-pagination',
+//  			autoplay:2000
+  			})   
 	</script>
 </html>

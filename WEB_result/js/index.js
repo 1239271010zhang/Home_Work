@@ -1,4 +1,5 @@
-//		获取商品分类	
+$(function(){
+//		获取导航栏分类
 		$(function(){
 			$.ajax({
 				type:'get',
@@ -12,7 +13,7 @@
 						</li>`)
 					}
 					$('.wrapper').navbarscroll();
-//		导航栏分类					 	
+//		导航栏商品列表					 	
 					$('#classList>li').on('click',function(){
 						var classid = this.getAttribute('classID');
 						$.ajax({
@@ -144,3 +145,4 @@
 				})
 			});
 //		获取热搜结束
+})

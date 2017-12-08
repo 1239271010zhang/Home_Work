@@ -18,11 +18,18 @@
 				background-color: #EB3E9E;
 				color: #fff;
 			}
-			#info>li{
+			.swiper-container{
+				height: 382px;
+				width: 382px;
+			}
+			.swiper-wrapper img{
+				height: 100%;
 				width: 100%;
 			}
-			#info>li img{
-				height: 100%;
+			#info{
+				margin-top:10px;
+			}
+			#info>li{
 				width: 100%;
 			}
 			#head{
