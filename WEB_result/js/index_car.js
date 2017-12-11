@@ -96,7 +96,7 @@ $(function(){
 						userID:localStorage.getItem('userID'),
 					},
 					success:function(data){
-						if(data.length == undefined){
+						if(data.length == 1){
 							emptyCar();
 						}
 					}
@@ -107,7 +107,7 @@ $(function(){
           		setTotal();
           	})
           	
-		//购物车信息
+			//购物车信息
 			$.ajax({
 				type:'get',
 				url:'http://datainfo.duapp.com/shopdata/getCar.php',
