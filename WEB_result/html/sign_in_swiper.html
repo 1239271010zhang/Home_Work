@@ -25,8 +25,17 @@
 				background-size: 100% 100%;
 				text-align: center;
 			}
-			#btn_slide a{
-				margin-top: 3000px;
+			#star{
+				height: 50px;
+				width: 100px;
+				line-height: 50px;
+				border: 2px solid #000000;
+				position: absolute;
+				top: 50%;
+				margin-left: 40%;
+			}
+			#star a{
+				font-weight: bolder;
 				text-decoration: none;
 				color: #000;
 			}
@@ -37,7 +46,11 @@
 	    	<div class="swiper-wrapper">
 	        	<div class="swiper-slide"><img src="../images/k1.jpg"/></div>
 	        	<div class="swiper-slide"><img src="../images/k2.jpg"/></div>
-	        	<div class="swiper-slide" id="btn_slide"><a href="sign_in.html" rel="external">立即体验</a></div>
+	        	<div class="swiper-slide" id="btn_slide">
+	        		<div id="star">
+	        			<a href="sign_in.html" rel="external">立即体验</a>
+	        		</div>
+	        	</div>
 	    	</div>
 	    	<div class="swiper-pagination"></div>
 		</div>
@@ -46,7 +59,7 @@
 	<script>
 		$(function(){
 			if(localStorage.getItem('login')){
-//				window.location.href="sign_in.html";
+				window.location.href="sign_in.html";
 			};
 		}) 
 		

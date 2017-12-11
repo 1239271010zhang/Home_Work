@@ -25,6 +25,9 @@
 			background: url(../images/bj.jpg) no-repeat;
 			background-size: 100% 100%;
 		}
+		.ui-panel-wrapper{
+			background-color: transparent!important;
+		}
 		#page{
 			background: url(../images/bj.jpg) no-repeat;
 			background-size: 100% 100%;
@@ -34,8 +37,9 @@
 			background-color: #fff;
 			color: #eb3e9e;
 		}
-		.ui-panel-wrapper{
+		#select-5-button{
 			background-color: transparent!important;
+			border: none!important;
 		}
 		#mbx{
 			height: 50px;
@@ -152,12 +156,4 @@
 			list-style:none;
 			color: #fff;
 			font-family: "微软雅黑";
-		}
-		#goodList li ul{
-			display: none;
-			background-color: yellow;
-			text-align: center;
-		}
-		#goodList li.show ul{
-			display: block;
 		}

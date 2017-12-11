@@ -70,7 +70,7 @@ $(function(){
           	});
           	//删除选中商品
           	$('#goodList').on('click','#remove_checked',function(){
-          		 $("#goodList :checkbox").each(function(){
+          		$("#goodList :checkbox").each(function(){
           		 	if($(this).prop('checked')){
           		 		$.ajax({
 							type:'get',
@@ -86,7 +86,7 @@ $(function(){
 						$(this).parents('tr').remove();
 						setTotal();
           		 	}
-          		 })
+          		})
           	})
           	//选中单个商品
           	$('#goodList').on('click','#checkbox',function(){
