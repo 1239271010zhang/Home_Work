@@ -86,7 +86,21 @@ $(function(){
 						$(this).parents('tr').remove();
 						setTotal();
           		 	}
-          		})
+          		});
+          		//获取购物车信息，如果数据为空，执行空车函数
+          		$.ajax({
+					type:'get',
+					url:'http://datainfo.duapp.com/shopdata/getCar.php',
+					dataType:'jsonp',
+					data:{
+						userID:localStorage.getItem('userID'),
+					},
+					success:function(data){
+						if(data.length == undefined){
+							emptyCar();
+						}
+					}
+				});
           	})
           	//选中单个商品
           	$('#goodList').on('click','#checkbox',function(){
