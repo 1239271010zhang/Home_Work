@@ -1,4 +1,7 @@
 $(function(){
+		if(!localStorage.getItem('userID')){
+			window.location.href="sign_in.html";
+		}
 //		获取导航栏分类
 		$(function(){
 			$.ajax({
