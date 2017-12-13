@@ -24,7 +24,7 @@ $(function(){
 				var mySwiper = new Swiper('.swiper-container',{
 					loop:true,
 	    			pagination: '.swiper-pagination',
-	    			autoplay:2000
+//	    			autoplay:2000
 	  			})    
 				//在图片下边打印商品信息
 				$('#info').html($('#info').html()+

@@ -89,13 +89,17 @@
 	</body>
 	<script type="text/javascript">
 		$('#btn1').click(function(){
-			localStorage.removeItem('userID');
-			window.location.href="sign_in_swiper.html";
+			if(confirm('确认退出当前账户?')){
+				localStorage.removeItem('userID');
+				window.location.href="sign_in.html";
+			}
 		})
 		$('#btn2').click(function(){
-			localStorage.removeItem('login');
-			localStorage.removeItem('userID');
-			window.location.href="sign_in_swiper.html";
+			if(confirm('确认退出登录?')){
+				localStorage.removeItem('login');
+				localStorage.removeItem('userID');
+				window.location.href="sign_in.html";
+			}
 		})
 	</script>
 </html>

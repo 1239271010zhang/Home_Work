@@ -135,7 +135,7 @@ $(function(){
 							<p style="font-weight:bold">`+data[i].goodsName+`</p>
 							<p style="color:#696969;font-size:smaller">UGG 施华洛世奇旗舰店</td>
 							<td align="right" style="vertical-align:top"><p style="font-weight:bolder" class="price">￥`+data[i].price+`</p>
-							<p style="color:#696969;">折扣:`+data[i].discount+`</p>
+							<p style="color:#696969;font-size:small">折扣:`+data[i].discount+`</p>
 							</td>
 							</tr>
 							<tr goodID="`+data[i].goodsID+`">

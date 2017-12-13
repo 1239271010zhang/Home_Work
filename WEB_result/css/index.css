@@ -1,3 +1,7 @@
+		html,body{
+			height: 100%;
+			width: 100%;
+		}
 		*{
 			padding: 0;
 			margin: 0;
@@ -123,14 +127,14 @@
 			margin-top:20px
 		}
 		#goodList li{
-			height: 150px;
-			width: 46%;
+			height: 15%;
+			width: 45%;
 			float: left;
-			margin: 50px 10px 0 0;
+			margin: 0 3% 1% 0;
 			border: 2px solid #EB3E9E;
 		}
-		#goodList img{
-			height: 100%;
+		#goodList li img{
+			height: 150px;
 			width: 100%;
 		}
 		#content_swiper{

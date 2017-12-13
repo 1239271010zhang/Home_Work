@@ -1,3 +1,4 @@
+$(function(){
 		$('#btn').click(function(){
 			var p1 = document.getElementById('p1');
 			var p2 = document.getElementById('p2');
@@ -33,3 +34,4 @@
 				p1.innerHTML = '用户名不能为空';
 			}
 		})
+})
