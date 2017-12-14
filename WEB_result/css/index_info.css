@@ -28,11 +28,11 @@
 				width: 100%;
 			}
 			#good_imgs{
-				height: 350px;
+				height: 300px;
 				overflow: hidden;
 			}
 			#good_imgs img{
-				height: 100%;
+				/*height: 100%;*/
 				width: 100%;
 			}
 			#head{

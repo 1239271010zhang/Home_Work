@@ -70,15 +70,19 @@ $(function(){
 		});
 //		文字轮播结束
 	
+//		获取焦点
+		$('#sc').click(function(){
+			$('#input_search').focus();
+		})
 //		搜索商品
-		$('#content_search').bind('input', function(){
-			if($('#content_search').val() !== ""){
+		$('#input_search').bind('input', function(){
+			if($('#input_search').val() !== ""){
 				$.ajax({
 					type:'get',
 					url:'http://datainfo.duapp.com/shopdata/selectGoodes.php',
 					dataType:'jsonp',
 					data:{
-						selectText:$('#content_search').val(),
+						selectText:$('#input_search').val(),
 					},
 					success:function(data){
 						$('#goodList').html("");

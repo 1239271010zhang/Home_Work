@@ -124,8 +124,8 @@ $(function(){
 							`<tr>
 							<th colspan="3" align="left"><p>唯品国际</p></th>
 							<th align="right" colspan="2">
-							<a id="selectAll" style="text-decoration:none;color:#000">全选</a>
-							<a id="reverse" style="text-decoration:none;color:#000">取消</a>
+							<a id="selectAll" style="text-decoration:none;color:#000;">全选</a>
+							<a id="reverse" style="text-decoration:none;color:#000;">取消</a>
 							</th>
 							</tr>`)
 					
