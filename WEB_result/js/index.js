@@ -1,6 +1,6 @@
 $(function(){
-		if(!localStorage.getItem('userID')){
-			window.location.href="sign_in.html";
+		if(!localStorage.getItem('login')){
+			window.location.href="sign_in_swiper.html";
 		}
 //		获取导航栏分类
 		$(function(){
@@ -9,7 +9,7 @@ $(function(){
 				url:'http://datainfo.duapp.com/shopdata/getclass.php',
 				dataType:'json',
 				success:function(data){
-					for(var i=0;i<data.length;i++){
+					for(var i=0;i<7;i++){
 						$('#classList').html($('#classList').html()+
 						`<li classID=`+data[i].classID+`>
 						<p>`+data[i].className+`</p>
@@ -32,8 +32,8 @@ $(function(){
 									for(var i=0;i<data.length;i++){
 										$('#goodList').html($('#goodList').html()+
 										`<li goodId=`+data[i].goodsID+`>
-										<img src="`+data[i].goodsListImg+`">
-										<p>`+data[i].goodsName.slice(0,8)+`...`+`</P>
+										<div id="good_imgs"><img src="`+data[i].goodsListImg+`"></div>
+										<p>`+data[i].goodsName.slice(0,9)+`</P>
 										<p style="color:red">`+`￥`+data[i].price+`</p>
 										</li>`);
 									}
@@ -86,8 +86,8 @@ $(function(){
 							for(var i=0;i<data.length;i++){
 								$('#goodList').html($('#goodList').html()+
 								`<li goodId=`+data[i].goodsID+`>
-								<img src="`+data[i].goodsListImg+`">
-								<p>`+data[i].goodsName.slice(0,8)+`...`+`</P>
+								<div id="good_imgs"><img src="`+data[i].goodsListImg+`"></div>
+								<p>`+data[i].goodsName.slice(0,9)+`</P>
 								<p style="color:red">`+`￥`+data[i].price+`</p>
 								</li>`)
 							}
@@ -110,8 +110,8 @@ $(function(){
 							for(var i=0;i<data.length;i++){
 								$('#goodList').html($('#goodList').html()+
 								`<li goodId=`+data[i].goodsID+`>
-								<img src="`+data[i].goodsListImg+`">
-								<p>`+data[i].goodsName.slice(0,8)+`...`+`</P>
+								<div id="good_imgs"><img src="`+data[i].goodsListImg+`"></div>
+								<p>`+data[i].goodsName.slice(0,9)+`</P>
 								<p style="color:red">`+`￥`+data[i].price+`</p>
 								</li>`)
 							}
@@ -135,8 +135,8 @@ $(function(){
 						for(var i=0;i<data.length;i++){
 							$('#goodList').html($('#goodList').html()+
 							`<li goodId=`+data[i].goodsID+`>
-							<img src="`+data[i].goodsListImg+`">
-							<p>`+data[i].goodsName.slice(0,8)+`...`+`</P>
+							<div id="good_imgs"><img src="`+data[i].goodsListImg+`"></div>
+							<p>`+data[i].goodsName.slice(0,9)+`</P>
 							<p style="color:red">`+`￥`+data[i].price+`</p>
 							</li>`);
 							}

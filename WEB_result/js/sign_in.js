@@ -1,7 +1,4 @@
-$(function(){	
-		if(!localStorage.getItem('login')){
-			window.location.href="sign_in_swiper.html";
-		}
+$(function(){
 		$('#btn').click(function(){
 			var p = document.getElementById('p1');
 			p.innerHTML = "";

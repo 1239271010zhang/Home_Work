@@ -20,7 +20,7 @@
             <a id="btn1"><button>更换账户</button></a>
 			<a id="btn2"><button>退出登录</button></a>
 		</div>
-		<div data-role="header" id="head" data-position="fixed">
+		<div data-role="header" id="head" data-position="fixed" data-tap-toggle="false">
 			<div id="mbx">
 				<a href="#mypanel" rel="external" data-role="button"><p>设置</p></a>
 			</div>
@@ -83,11 +83,14 @@
 				</ul>
 			</div>
 		</div>
-		<div data-role="footer" data-position="fixed" data-theme='z'>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme='z'>
 			<h3>&copy;唯品会</h3>
 		</div>
 	</body>
 	<script type="text/javascript">
+		if(!localStorage.getItem('userID')){
+			window.location.href="sign_in.html";
+		}
 		$('#btn1').click(function(){
 			if(confirm('确认退出当前账户?')){
 				localStorage.removeItem('userID');

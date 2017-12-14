@@ -19,17 +19,20 @@
 				color: #fff;
 			}
 			.swiper-container{
-				height: 40%;
-				width: 100%;
-			}
-			.swiper-wrapper img{
-				height: 100%;
 				width: 100%;
 			}
 			#info{
 				margin-top:10px;
 			}
 			#info>li{
+				width: 100%;
+			}
+			#good_imgs{
+				height: 350px;
+				overflow: hidden;
+			}
+			#good_imgs img{
+				height: 100%;
 				width: 100%;
 			}
 			#head{

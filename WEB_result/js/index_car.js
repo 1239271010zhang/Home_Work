@@ -1,4 +1,7 @@
 $(function(){
+		if(!localStorage.getItem('userID')){
+			window.location.href="sign_in.html";
+		}
 		//计算总价函数
 		function setTotal(){ 
 			var s = 0; 
@@ -33,7 +36,7 @@ $(function(){
             $("#goodList").on('click','#reverse',function(){  
                 $("#goodList :checkbox").each(function(){
                 	$(this).prop("checked",false);
-                		setTotal();
+                	setTotal();
                 });
             });  
             //清空购物车
@@ -96,7 +99,7 @@ $(function(){
 						userID:localStorage.getItem('userID'),
 					},
 					success:function(data){
-						if(data.length == 1){
+						if(data.length == undefined){
 							emptyCar();
 						}
 					}

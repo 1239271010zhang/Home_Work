@@ -13,11 +13,11 @@ $(function(){
 				$('#head').html($('#head').html()+
 				`<p>`+data[0].goodsName.slice(0,8)+`...`+`</p>`)
 				//商品轮播图
-				var imgs = JSON.parse(data[0]['goodsBenUrl']);
+				var imgs = JSON.parse(data[0]['imgsUrl']);
 				for(var i=0;i<imgs.length;i++){
 					$('.swiper-wrapper').html($('.swiper-wrapper').html()+
 					`<div class="swiper-slide">
-					<img src="`+imgs[i]+`" alt="商品图" />
+					<div id="good_imgs"><img src="`+imgs[i]+`" alt="商品图" /></div>
 					</div>`)
 				}
 				//实现滑动效果
@@ -33,7 +33,7 @@ $(function(){
 				<p style="height:10px"></p>
 				<p style="color: #696969">`+data[0].detail.slice(5)+`</p>
 				<p style="height:10px"></p>
-				<spanp style="font-weight:bolder">`+`￥`+data[0].price+`</spanp>
+				<spanp style="font-weight:bolder;color:red">`+`￥`+data[0].price+`</spanp>
 				<span style="color:#696969;margin-left:10px">限时折扣:`+data[0].discount+`</span>
 				</li>`)
 			}
