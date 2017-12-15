@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>唯品会商城</title>
 		<link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css" />
-		<link rel="stylesheet" href="../css/swiper.min.css" />		
+		<link rel="stylesheet" href="../css/swiper.min.css" />
 		<script src="../js/jquery.1.11.3.min.js"></script>
 		<script src="../js/jquery.mobile-1.4.5.min.js"></script>
 		<script src="../js/navbarscroll.js"></script>
@@ -13,44 +14,57 @@
 		<script src="../js/swiper.min.js"></script>
 		<link rel="stylesheet" href="../css/index.css" />
 	</head>
+
 	<body>
 		<div data-role="page" id="page">
 			<!--panel侧边栏-->
-        	<div data-role="panel" id="myPanel" data-display="push">
+			<div data-role="panel" id="myPanel" data-display="push">
 				<div id="panel_head">
 					<a href="#" data-role="button" data-iconpos="notext" data-icon="lp"></a>
 					<p>唯品会Vip会员</p>
 				</div>
 				<div id="panel_content">
 					<ul data-role="listview" data-inset="true">
-						<li data-icon="false"><a href="#"><img src="../images/logo.jpg" class="ui-li-icon" />了解会员特权</a></li>
-                		<li data-icon="false"><a href="#"><img src="../images/logo.jpg" class="ui-li-icon" />账户余额</a></li>
-                		<li data-icon="false"><a href="#"><img src="../images/logo.jpg" class="ui-li-icon" />个性装扮</a></li>
-                		<li data-icon="false"><a href="#"><img src="../images/logo.jpg" class="ui-li-icon" />我的特卖</a></li>
-                		<li data-icon="false"><a href="#"><img src="../images/logo.jpg" class="ui-li-icon" />品牌收藏</a></li>
+						<li data-icon="false">
+							<a href="#"><img src="../images/logo.jpg" class="ui-li-icon" />了解会员特权</a>
+						</li>
+						<li data-icon="false">
+							<a href="#"><img src="../images/logo.jpg" class="ui-li-icon" />账户余额</a>
+						</li>
+						<li data-icon="false">
+							<a href="#"><img src="../images/logo.jpg" class="ui-li-icon" />个性装扮</a>
+						</li>
+						<li data-icon="false">
+							<a href="#"><img src="../images/logo.jpg" class="ui-li-icon" />我的特卖</a>
+						</li>
+						<li data-icon="false">
+							<a href="#"><img src="../images/logo.jpg" class="ui-li-icon" />品牌收藏</a>
+						</li>
 					</ul>
 				</div>
-	            <div id="panel_foot">
-	            	<a href="index_user.html" rel="external"><button>个人中心</button></a>
+				<div id="panel_foot">
+					<a href="index_user.html" rel="external"><button>个人中心</button></a>
 					<a href="index_car.html" rel="external"><button>购物车</button></a>
-	            </div>
-	        </div>
+				</div>
+			</div>
 			<!--头部-->
 			<div data-role="header" id="head1" data-position="fixed" data-tap-toggle="false">
 				<div id="mbx">
-					<a href="#myPanel"><img src="../images/mianbaoxie.jpg"/></a>
+					<a href="#myPanel"><img src="../images/mianbaoxie.jpg" /></a>
 				</div>
 				<div id="h1">
 					<span>唯品会商城</span>
 				</div>
 				<div id="head_select">
-					<a href="#" id="sc"><img src="../images/select.png"/></a>
+					<a href="#" id="sc"><img src="../images/select.png" /></a>
 				</div>
-		    <!--轮播文字-->        
+				<!--轮播文字-->
 				<div class="wrapper" id="nav">
 					<div class="scroller">
 						<ul id="classList">
-							<li class="cur" id="li01"><p>今日推荐</p></li>
+							<li class="cur" id="li01">
+								<p>今日推荐</p>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -59,50 +73,50 @@
 			<div data-role="content" id="content1">
 				<div id="content_swiper">
 					<div id="box">
-		 				<div id="box_son">
-		    				<div id="box1">
-					    		<ul>
-							        <li>公告：冬季新品限时折扣，夏季时装优惠促销，新品春装即将上线，冬季新品限时折扣，夏季时装优惠促销，新品春装即将上线。&nbsp;&nbsp;&nbsp;</li>
+						<div id="box_son">
+							<div id="box1">
+								<ul>
+									<li>公告：冬季新品限时折扣，夏季时装优惠促销，新品春装即将上线，冬季新品限时折扣，夏季时装优惠促销，新品春装即将上线。&nbsp;&nbsp;&nbsp;</li>
 									<li>公告：冬季新品限时折扣，夏季时装优惠促销，新品春装即将上线，冬季新品限时折扣，夏季时装优惠促销，新品春装即将上线。</li>
-					      		</ul>
-		    				</div>
-		    				<div id="box2"></div>
-		  				</div>
+								</ul>
+							</div>
+							<div id="box2"></div>
+						</div>
 					</div>
 				</div>
-			<!--轮播图-->
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div id="swiper_content_imgs">
-									<img src="../images/swiper01.jpg"/>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div id="swiper_content_imgs">
-									<img src="../images/swiper02.jpg"/>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div id="swiper_content_imgs">
-									<img src="../images/swiper03.jpg"/>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div id="swiper_content_imgs">
-									<img src="../images/swiper04.jpg"/>
-								</div>
+				<!--轮播图-->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div id="swiper_content_imgs">
+								<img src="../images/swiper01.jpg" />
 							</div>
 						</div>
-						<div class="swiper-pagination"></div>
+						<div class="swiper-slide">
+							<div id="swiper_content_imgs">
+								<img src="../images/swiper02.jpg" />
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div id="swiper_content_imgs">
+								<img src="../images/swiper03.jpg" />
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div id="swiper_content_imgs">
+								<img src="../images/swiper04.jpg" />
+							</div>
+						</div>
 					</div>
+					<div class="swiper-pagination"></div>
+				</div>
 				<div id="content_ul">
 					<div id="content_search">
 						<input type="text" id="input_search" placeholder="请输入想搜索的商品" />
 					</div>
 					<ul id="goodList"></ul>
 				</div>
-				
+
 			</div>
 			<!--底部开始-->
 			<div data-role="footer" id="foot1" data-position="fixed" data-tap-toggle="false" data-theme='z'>
@@ -111,5 +125,6 @@
 		</div>
 	</body>
 	<script src="../js/index.js"></script>
+
 </html>
 -

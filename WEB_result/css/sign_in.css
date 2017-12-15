@@ -1,29 +1,36 @@
-			p{
+			p {
 				color: #000;
 			}
-			a{
+			
+			a {
 				text-decoration: none;
 				color: #000;
 			}
-			#page{
+			
+			#page {
 				background: url(../images/bj.jpg) no-repeat;
 				background-size: 100% 100%;
 			}
-			.ui-page-theme-a{
-				background-color: 
+			
+			.ui-page-theme-a {
+				background-color:
 			}
-			.ui-bar-z{
+			
+			.ui-bar-z {
 				background-color: #eb3e9e;
 				color: #fff;
 			}
-			#p1{
+			
+			#p1 {
 				height: 10px;
 			}
-			#content{
+			
+			#content {
 				margin-top: 100%;
 				text-align: center;
 			}
-			#content img{
+			
+			#content img {
 				height: 300px;
 				width: 300px;
 			}
