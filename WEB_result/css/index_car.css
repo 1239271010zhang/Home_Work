@@ -34,12 +34,22 @@
 			#goodList tr th{
 				border-bottom: 1px solid #696969;
 			}
+			#car_footer{
+				background-color: #fff;
+				height: 50px;
+				line-height: 50px;
+			}
 			#result_btn{
-				width: 93%;
-				background-color: transparent!important;
+				float: right;
+				margin-right: 20px;
+				background-color: #EB3E9E!important;
 			}
 			#remove{
 				float: right;
 				height: 30px;
 				width: 30px;
+			}
+			#result_money{
+				height: 30px;
+				width: 100%;
 			}

@@ -190,8 +190,8 @@ $(function(){
 						
 						$('#goodList').html($('#goodList').html()+
 						`<tr>
-						<td colspan="4" style="border-top:1px solid #696969">总金额：<span id="total" style="color:red"></span></td>
-						<td align="right" style="border-top:1px solid #696969"><a id="remove_checked" style="text-decoration:none;color:red;">删除</a></td></tr>`)
+						<td colspan="5" align="right" style="border-top:1px solid #696969"><a id="remove_checked" style="text-decoration:none;color:red;">删除</a>
+						</td></tr>`)
 					}else{
 						emptyCar();
 					}

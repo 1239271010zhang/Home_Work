@@ -138,6 +138,7 @@
 		#content_swiper{
 			height: 40px;
 			left: 0px;
+			z-index: 2;
 		}
 		#box{ 
 			overflow:hidden;
@@ -158,4 +159,14 @@
 			list-style:none;
 			color: #fff;
 			font-family: "微软雅黑";
+		}
+		.swiper-container{
+			width: 100%;
+		}
+		#swiper_content_imgs{
+			height: 200px;
+		}
+		#swiper_content_imgs img{
+			height: 100%;
+			width: 100%;
 		}

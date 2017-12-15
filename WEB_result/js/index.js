@@ -69,7 +69,14 @@ $(function(){
 			var timer = setInterval(move,20);
 		});
 //		文字轮播结束
-	
+
+//轮播图展示
+		var mySwiper = new Swiper('.swiper-container',{
+			loop:true,
+	    	pagination: '.swiper-pagination',
+	    	autoplay:2000
+	  	})
+		
 //		获取焦点
 		$('#sc').click(function(){
 			$('#input_search').focus();
