@@ -1,4 +1,9 @@
 $(function(){
+		$('#look_car').click(function(){
+			if(localStorage.getItem('userID')){
+				window.location.href="sign_in.html";
+			}
+		})
 //		显示商品详细
 		var goodId = window.location.hash.slice(1);
 		$.ajax({
