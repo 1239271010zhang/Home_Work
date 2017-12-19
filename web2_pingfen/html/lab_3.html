@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>商品评分</title>
+		<meta charset="UTF-8"/>
+		<script src="../js/jquery.1.11.3.min.js"></script>
+		<style type="text/css">
+			#star img{
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+	        <label for="textarea">宝贝与描述相符(打分匿名)</label>
+	        <div id="star"><img src="../img/star0.png" index="1" title="特别差，给1颗星"/></div>
+			<div id="star"><img src="../img/star0.png" index="2" title="很差，给2颗星"/></div>
+			<div id="star"><img src="../img/star0.png" index="3" title="一般般，给3颗星"/></div>
+			<div id="star"><img src="../img/star0.png" index="4" title="很好，给4颗星"/></div>
+			<div><img src="../img/star0.png" index="5" title="非常好，给5颗星"/></div>
+	        <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+	    </div>
+			
+	</body>
+	<script type="text/javascript">
+		var s = document.getElementById("box")
+		var n = s.getElementsByTagName("img")
+		var	txt = document.getElementById('textarea');
+		var con=false;
+		function clear(){
+			for(var i = 0; i < n.length; i++){
+				n[i].src ="../img/star0.png";
+			}
+		}
+		for(var i = 0; i < n.length; i++) {
+			n[i].onclick = function() {
+				var index = this.getAttribute("index");
+				txt.value = this.getAttribute('title');
+				if(index>2){
+					for(var i = 0; i < index; i++) {
+						n[i].src = "../img/star2.png";
+					}
+				}else{
+					for(var i = 0; i < index; i++) {
+						n[i].src = "../img/star1.png";
+					}
+				}
+				con=true;
+			}
+			n[i].onmouseover = function() {
+				var index = this.getAttribute("index");
+				clear();
+				if(index>2){
+					for(var i = 0; i < index; i++) {
+						n[i].src = "../img/star2.png";
+					}
+				}else{
+					for(var i = 0; i < index; i++) {
+						n[i].src = "../img/star1.png";
+					}
+				}
+			}
+			n[i].onmouseout = function(){
+				if(!con){
+					var index = this.getAttribute("index");
+					for(var i=0;i<index;i++){
+						n[i].src = "../img/star0.png";
+					}
+				}
+			}
+		}
+	</script>
+</html>

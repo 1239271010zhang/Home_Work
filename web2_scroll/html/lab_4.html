@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>滚动相册</title>
+		<style type="text/css">
+			#picScroll{
+				white-space: nowrap; 
+				overflow: hidden;
+				width:600px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="picScroll">
+			<span id="picScroll1">
+				<img src="../images/1.jpg" />
+				<img src="../images/2.jpg" />
+				<img src="../images/3.jpg" />
+				<img src="../images/4.jpg" />
+				<img src="../images/5.jpg" />
+				<img src="../images/6.jpg" />
+				<img src="../images/7.jpg" />
+				<img src="../images/8.jpg" />
+			</span>
+			<span id="picScroll2"></span>
+		 </div> 
+	</body>
+	<script type="text/javascript">
+		var box = document.getElementById('picScroll');
+		var box1 = document.getElementById('picScroll1');
+		var box2 = document.getElementById('picScroll2');
+		box2.innerHTML = box1.innerHTML;
+		var imgs = box1.getElementsByTagName('img');
+		function changeToLeft(){
+			if(box.scrollLeft - box2.offsetWidth >= 0){
+				box.scrollLeft -= box1.offsetWidth;
+			}
+			else{
+				box.scrollLeft++;
+			}
+		}
+		var timer = setInterval(changeToLeft,10);
+		box.onmouseout=function(){
+			timer = setInterval(changeToLeft,10);
+		}
+		box.onmouseover = function(){
+			clearInterval(timer);
+		}
+	</script>
+</html>
